@@ -102,10 +102,10 @@ print(f'Максимальна цифра: {max_num}')
 
 
 """Визначити чи слово паліндром"""
-word = list(str(input('Введіть слово яке бажаєте перевірити:\n')).lower())
-rev_word = word.copy()
+word_pol = list(str(input('Введіть слово яке бажаєте перевірити:\n')).lower())
+rev_word = word_pol.copy()
 rev_word.reverse()
-if word == rev_word:
+if word_pol == rev_word:
     print('Так, введене слово - паліндром!')
 else:
     print('Ні, введене слово не паліндром..')
