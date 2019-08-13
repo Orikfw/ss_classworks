@@ -1,4 +1,5 @@
 from random import random
+import math
 """Роздрукувати всі парні числа менші 100"""
 #використовуючи цикл for
 list_of_even1 = []
@@ -83,10 +84,19 @@ for word in my_list_str:
 
 """Перевірити чи число просте"""
 number_to_check = int(input('Введіть число яке бажаєте перевірити:\n'))
-if ((157 ** number_to_check) - 157) % number_to_check == 0:
+if number_to_check < 2:
+    print('Число має бути 2 чи більше')
+elif number_to_check == 2:
     print(f'Так, число {number_to_check} - просте!')
+i = 2
+limit = int(math.sqrt(number_to_check))
+while i <= limit:
+    if number_to_check % i == 0:
+        print(f'Ні, число {number_to_check} - складене...')
+        break
+    i += 1
 else:
-    print(f'Ні, число {number_to_check} - складне..')
+    print(f'Так, число {number_to_check} - просте!')
 
 
 """Знайти максимальну цифру дійсного числа"""
