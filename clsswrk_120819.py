@@ -24,7 +24,7 @@ except ValueError:
 """
 print(f'Парні які діляться на 2: {list(range(0, 11, 2))}')
 print(f'Непарні які діляться на 3: {[num for num in range(1,11) if num % 2 == 1 and num % 3 == 0]}')
-print(f'Числа які не діляться на 2 і 3: {[num for num in range(1,11) if num % 2 == 1 and num % 3 == 1]}')
+print(f'Числа які не діляться на 2 і 3: {[num for num in range(1,11) if num % 2 != 0 and num % 3 != 0]}')
 
 
 """Факторіал числа що вводить користувач(без рекурсії)"""
